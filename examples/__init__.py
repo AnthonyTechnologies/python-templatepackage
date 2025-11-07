@@ -1,5 +1,5 @@
 """__init__.py
-
+Examples for the templatepackage package.
 """
 
 # Header #
@@ -11,8 +11,3 @@ __copyright__ = "Copyright 2021, Anthony Fong"
 __license__ = "MIT"
 
 __version__ = "0.0.0"
-
-
-# Imports #
-# Local Packages #
-
