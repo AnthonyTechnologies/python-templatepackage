@@ -39,7 +39,7 @@ Static type checking and code quality checks are available via dedicated nox ses
 .. code-block:: bash
 
    nox -s mypy
-   nox -s lint
+   nox -s pre-commit
 
 Continuous integration
 ----------------------

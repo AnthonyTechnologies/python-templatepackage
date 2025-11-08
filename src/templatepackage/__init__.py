@@ -1,6 +1,4 @@
-"""__init__.py
-
-"""
+"""__init__.py"""
 
 # Header #
 __package_name__ = "templatepackage"
@@ -15,4 +13,3 @@ __version__ = "0.0.0"
 
 # Imports #
 # Local Packages #
-
