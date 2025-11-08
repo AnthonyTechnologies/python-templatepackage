@@ -41,7 +41,7 @@ Static type checking and code quality checks are available via dedicated nox ses
    nox -s mypy
    nox -s pre-commit
 
-Continuous integration
+Continuous Integration
 ----------------------
 
 Tests are also executed in CI. Refer to ``noxfile.py`` for the authoritative list of sessions and their parameters.
