@@ -1,5 +1,5 @@
 API Reference
-=========
+=============
 
 .. contents::
     :local:
@@ -7,8 +7,8 @@ API Reference
     :backlinks: none
 
 
-templatepackage.__main__
---------------------
+templatepackage
+---------------
 
-.. automodule:: templatepackage.__main__
+.. automodule:: templatepackage
    :members:

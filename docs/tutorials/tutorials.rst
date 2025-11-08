@@ -1,13 +1,13 @@
 Tutorials and Examples
 ======================
 
-.. contents:: On this page
+.. contents:: On This Page
    :local:
    :backlinks: none
 
 This project includes additional tutorials and examples in the repository to help you learn by doing.
 
-Repository tutorials
+Repository Tutorials
 --------------------
 
 - Jupyter notebooks: see the ``tutorials/`` directory.
