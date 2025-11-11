@@ -1,102 +1,90 @@
-templatepackage
-===============
+python-templatepackage
+======================
 
-|PyPI| |Status| |Python Version| |License|
-
-|Read the Docs| |Tests| |Codecov|
-
-|pre-commit|
-
-.. |PyPI| image:: https://img.shields.io/pypi/v/templatepackage.svg
-   :target: https://pypi.org/project/templatepackage/
-   :alt: PyPI
-.. |Status| image:: https://img.shields.io/pypi/status/templatepackage.svg
-   :target: https://pypi.org/project/templatepackage/
-   :alt: Status
-.. |Python Version| image:: https://img.shields.io/pypi/pyversions/templatepackage
-   :target: https://pypi.org/project/templatepackage
-   :alt: Python Version
-.. |License| image:: https://img.shields.io/pypi/l/templatepackage
-   :target: https://opensource.org/licenses/MIT
-   :alt: License
-.. |Read the Docs| image:: https://img.shields.io/readthedocs/python-templatepackage/latest.svg?label=Read%20the%20Docs
-   :target: https://python-templatepackage.readthedocs.io/
-   :alt: Read the documentation at https://python-templatepackage.readthedocs.io/
-.. |Tests| image:: https://github.com/AnthonyTechnologies/python-templatepackage/workflows/Tests/badge.svg
-   :target: https://github.com/AnthonyTechnologies/templatepackage/actions?workflow=Tests
-   :alt: Tests
-.. |Codecov| image:: https://codecov.io/gh/AnthonyTechnologies/python-templatepackage/branch/main/graph/badge.svg
-   :target: https://codecov.io/gh/AnthonyTechnologies/python-templatepackage
-   :alt: Codecov
-.. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
-   :target: https://github.com/pre-commit/pre-commit
-   :alt: pre-commit
-
+A Cookiecutter template for python projects that follow
+`Anthony's Python Style Guide <https://github.com/AnthonyTechnologies/python-styleguide>`_. It scaffolds a
+fully‑configured project with packaging, testing, formatting, documentation, and continuous integration.
 
 Features
 --------
+- Modern packaging with ``pyproject.toml`` (Poetry by default)
+- Typed package layout under ``src/`` with ``py.typed``
+- Preconfigured tests (``pytest`` + ``nox`` sessions)
+- Linting/formatting with Ruff, isort, and Black conventions
+- Documentation skeleton (Sphinx/reStructuredText)
+- Example module structure and ``__init__`` exports
+- Optional license selection (MIT, Apache‑2.0, GPL‑3.0)
+- Editor, pre‑commit, and GitHub workflow configuration templates
 
-Add a description of the package here!
-
-Requirements
+Contents
 ------------
+At the repository root (this template):
 
-* Python 3.11 or later
+- ``cookiecutter.json`` – variables and defaults used during generation
+- ``README.rst`` – you are here; describes the template
+- ``LICENSE`` – license for this template repository
+- ``{{cookiecutter.project_name}}/`` – the project skeleton that Cookiecutter copies
 
-Installation
-------------
+Within the generated project skeleton (key paths):
 
-You can install *templatepackage* via pip_ from PyPI_:
+- ``pyproject.toml`` – packaging and tool configuration
+- ``noxfile.py`` – automated sessions for tests, lint, docs
+- ``src/{{ cookiecutter.package_import_name }}/`` – your package code
+- ``tests/`` – unit tests
+- ``docs/`` – Sphinx documentation skeleton
+- ``examples/`` – example scripts
+- ``docs/python-styleguide/`` – the style guide referenced by this template
 
-.. code:: console
+Quick start
+-----------
 
-   $ pip install templatepackage
+Requirements:
 
+- Python 3.10+
+- ``pip``
+- ``cookiecutter``
 
-Documentation
+Install Cookiecutter:
+
+.. code-block:: console
+
+   pip install cookiecutter
+
+Generate a new project from this template (choose one):
+
+1) Local path (clone/download this repository first):
+
+.. code-block:: console
+
+   cookiecutter /path/to/python-templatepackage
+
+2) Git URL (no local clone needed):
+
+.. code-block:: console
+
+   cookiecutter https://github.com/AnthonyTechnologies/python-templatepackage
+
+During generation, you will be prompted for a few values. The most important are:
+
+- ``package_name``: The distribution and base import name (e.g. ``awesome-lib``)
+- ``package_import_name``: Derived automatically from ``package_name``
+- ``project_name``: The repository/project name (default: ``python-{{ cookiecutter.package_name }}``)
+- ``license``: One of MIT, Apache-2.0, GPL-3.0
+- ``development_status``: Trove classifier reflecting maturity
+
+Customization
 -------------
 
-For comprehensive guides, see the full documentation on Read the Docs:
-https://python-templatepackage.readthedocs.io/
-
-The documentation includes a user guide, API reference, tutorials, and examples to help you get productive quickly.
-
-For project-wide conventions and contribution standards, refer to `Anthony's Python Style Guide`_.
-
+Adjust defaults in ``cookiecutter.json`` to fit your standards (e.g., default license, classifiers, or organization).
 
 Contributing
 ------------
 
-Contributions are very welcome.
-To learn more, see the `Contributor Guide`_.
-
+Issues and pull requests are welcome. If you extend the template, consider updating the documentation and tests in the
+skeleton to keep generated projects consistent.
 
 License
 -------
 
-Distributed under the terms of the `MIT license`_,
-*templatepackage* is free and open source software.
-
-
-Issues
-------
-
-If you encounter any problems,
-please `file an issue`_ along with a detailed description.
-
-
-Credits
--------
-
-Project Organization: `Anthony's Python Style Guide`_ based on `The Google Style Guide`_ and `Hypermodern Python`_ by `Claudio Jolowicz`_.
-
-.. _pip: https://pip.pypa.io/
-.. _PyPI: https://pypi.org/
-.. _MIT license: https://opensource.org/licenses/MIT
-.. _file an issue: https://github.com/AnthonyTechnologies/python-baseobjects/issues
-.. _Anthony's Python Style Guide: https://github.com/AnthonyTechnologies/python-styleguide
-.. _The Google Style Guide: https://google.github.io/styleguide/pyguide.html
-.. _Hypermodern Python: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
-.. _Claudio Jolowicz: https://github.com/cjolowicz
-.. github-only
-.. _Contributor Guide: CONTRIBUTING.rst
+This template repository is provided under the terms of the ``LICENSE`` file at the repository root. Generated projects
+will include the license you select when running Cookiecutter.
