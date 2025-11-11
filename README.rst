@@ -62,7 +62,7 @@ Generate a new project from this template (choose one):
 
 .. code-block:: console
 
-   cookiecutter https://github.com/AnthonyTechnologies/python-templatepackage
+   cookiecutter --checkout anthony-defaults https://github.com/AnthonyTechnologies/python-templatepackage.git
 
 During generation, you will be prompted for a few values. The most important are:
 
