@@ -12,7 +12,7 @@ maintainers = [{name = "{{ cookiecutter.author }}", email = "{{ cookiecutter.ema
 
 # License
 license = "{{ cookiecutter.license }}"
-license-files = ["LICENSE.rst"]
+license-files = ["LICENSE"]
 
 # Package Dependencies
 requires-python = ">=3.11"  # Upper bound defined in tool.poetry.dependencies
