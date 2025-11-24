@@ -35,7 +35,7 @@ Within the generated project skeleton (key paths):
 - ``examples/`` – example scripts
 - ``docs/python-styleguide/`` – the style guide referenced by this template
 
-Quick start
+Quick Start
 -----------
 
 Requirements:
@@ -43,12 +43,19 @@ Requirements:
 - Python 3.10+
 - ``pip``
 - ``cookiecutter``
+- ``poetry``
 
 Install Cookiecutter:
 
 .. code-block:: console
 
    pip install cookiecutter
+
+Install Poetry:
+
+.. code-block:: console
+
+   pip install poetry
 
 Generate a new project from this template (choose one):
 
@@ -71,6 +78,21 @@ During generation, you will be prompted for a few values. The most important are
 - ``project_name``: The repository/project name (default: ``python-{{ cookiecutter.package_name }}``)
 - ``license``: One of MIT, Apache-2.0, GPL-3.0
 - ``development_status``: Trove classifier reflecting maturity
+
+After generation, create the poetry lock file:
+
+.. code-block:: console
+
+   cd your-project-directory
+   poetry lock
+
+Remember when you add dependencies in the ``pyproject.toml``, re-run poetry lock.
+
+If you want to add Anthony's Style Guide as a git submodule, first ensure the new project is a git repository then:
+
+.. code-block:: console
+
+   git submodule add https://github.com/AnthonyTechnologies/python-styleguide.git docs/python-styleguide
 
 Customization
 -------------
