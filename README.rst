@@ -7,7 +7,7 @@ fully‑configured project with packaging, testing, formatting, documentation, a
 
 Features
 --------
-- Modern packaging with ``pyproject.toml`` (Poetry by default)
+- Modern packaging with ``pyproject.toml`` (uv by default)
 - Typed package layout under ``src/`` with ``py.typed``
 - Preconfigured tests (``pytest`` + ``nox`` sessions)
 - Linting/formatting with Ruff, isort, and Black conventions
@@ -40,10 +40,10 @@ Quick Start
 
 Requirements:
 
-- Python 3.10+
+- Python 3.14+
 - ``pip``
 - ``cookiecutter``
-- ``poetry``
+- ``uv``
 
 Install Cookiecutter:
 
@@ -51,11 +51,11 @@ Install Cookiecutter:
 
    pip install cookiecutter
 
-Install Poetry:
+Install uv:
 
 .. code-block:: console
 
-   pip install poetry
+   pip install uv
 
 Generate a new project from this template (choose one):
 
@@ -78,15 +78,6 @@ During generation, you will be prompted for a few values. The most important are
 - ``project_name``: The repository/project name (default: ``python-{{ cookiecutter.package_name }}``)
 - ``license``: One of MIT, Apache-2.0, GPL-3.0
 - ``development_status``: Trove classifier reflecting maturity
-
-After generation, create the poetry lock file:
-
-.. code-block:: console
-
-   cd your-project-directory
-   poetry lock
-
-Remember when you add dependencies in the ``pyproject.toml``, re-run poetry lock.
 
 If you want to add Anthony's Style Guide as a git submodule, first ensure the new project is a git repository then:
 

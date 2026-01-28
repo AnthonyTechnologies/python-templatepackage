@@ -1,17 +1,17 @@
 Tutorials and Examples
 ======================
 
-.. contents:: On This Page
+.. contents:: Contents
    :local:
    :backlinks: none
 
 This project includes additional tutorials and examples in the repository to help you learn by doing.
 
-Repository Tutorials
---------------------
+Jupyter Tutorials
+-----------------
 
-- Jupyter notebooks: see the ``tutorials/`` directory.
-- Code examples: see the ``examples/`` directory.
+The following Jupyter notebooks are available in the ``tutorials/`` directory of the repository:
+
 
 To run the notebooks locally, install the optional dependencies and launch Jupyter:
 
@@ -20,4 +20,9 @@ To run the notebooks locally, install the optional dependencies and launch Jupyt
    pip install -e .[jupyter]
    jupyter notebook tutorials/
 
-Note: The documentation site does not render the notebooks directly. Use the links above to explore them locally.
+Note: The documentation site does not render the notebooks directly.
+
+Code Examples
+-------------
+
+The ``examples/`` directory contains Python scripts demonstrating key features:
