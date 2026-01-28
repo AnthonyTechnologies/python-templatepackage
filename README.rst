@@ -8,7 +8,6 @@ fully‑configured project with packaging, testing, formatting, documentation, a
 Features
 --------
 - Modern packaging with ``pyproject.toml`` (uv by default)
-- Typed package layout under ``src/`` with ``py.typed``
 - Preconfigured tests (``pytest`` + ``nox`` sessions)
 - Linting/formatting with Ruff, isort, and Black conventions
 - Documentation skeleton (Sphinx/reStructuredText)
@@ -21,7 +20,7 @@ Contents
 At the repository root (this template):
 
 - ``cookiecutter.json`` – variables and defaults used during generation
-- ``README.rst`` – you are here; describes the template
+- ``README.rst`` – describes the template
 - ``LICENSE`` – license for this template repository
 - ``{{cookiecutter.project_name}}/`` – the project skeleton that Cookiecutter copies
 
@@ -29,7 +28,7 @@ Within the generated project skeleton (key paths):
 
 - ``pyproject.toml`` – packaging and tool configuration
 - ``noxfile.py`` – automated sessions for tests, lint, docs
-- ``src/{{ cookiecutter.package_import_name }}/`` – your package code
+- ``src/{{ cookiecutter.package_import_name }}/`` – package code
 - ``tests/`` – unit tests
 - ``docs/`` – Sphinx documentation skeleton
 - ``examples/`` – example scripts
@@ -38,40 +37,60 @@ Within the generated project skeleton (key paths):
 Quick Start
 -----------
 
-Requirements:
+**Requirements**
 
-- Python 3.14+
-- ``pip``
-- ``cookiecutter``
 - ``uv``
+- Python 3.14+
+- ``cookiecutter``
 
-Install Cookiecutter:
+**1 Install uv**
+
+Either follow the instructions on the uv website https://docs.astral.sh/uv/getting-started/installation/ or use these
+commands from the website.
+
+macOS and Linux
 
 .. code-block:: console
 
-   pip install cookiecutter
+   curl -LsSf https://astral.sh/uv/install.sh | sh
 
-Install uv:
+Windows
 
 .. code-block:: console
 
-   pip install uv
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-Generate a new project from this template (choose one):
+**2 Install Python**
 
-1) Local path (clone/download this repository first):
+.. code-block:: console
+
+    uv python install
+
+
+**3 Install Cookiecutter**
+
+.. code-block:: console
+
+   uv pip install cookiecutter
+
+**4 Run Cookiecutter**
+
+To generate a new project, either clone this repository and run cookiecutter on that directory or have cookiecutter run
+from the Github URL.
+
+Local path (clone/download this repository first):
 
 .. code-block:: console
 
    cookiecutter /path/to/python-templatepackage
 
-2) Git URL (no local clone needed):
+Github URL (no local clone needed):
 
 .. code-block:: console
 
    cookiecutter https://github.com/AnthonyTechnologies/python-templatepackage
 
-During generation, you will be prompted for a few values. The most important are:
+During generation, there will be prompts for a few values. The most important are:
 
 - ``package_name``: The distribution and base import name (e.g. ``awesome-lib``)
 - ``package_import_name``: Derived automatically from ``package_name``
@@ -79,7 +98,11 @@ During generation, you will be prompted for a few values. The most important are
 - ``license``: One of MIT, Apache-2.0, GPL-3.0
 - ``development_status``: Trove classifier reflecting maturity
 
-If you want to add Anthony's Style Guide as a git submodule, first ensure the new project is a git repository then:
+**5 Optional Style Guide**
+
+Anthony's Style Guide can be added as a git submodule, which
+
+First ensure the new project is a git repository then:
 
 .. code-block:: console
 
@@ -88,16 +111,13 @@ If you want to add Anthony's Style Guide as a git submodule, first ensure the ne
 Customization
 -------------
 
-Adjust defaults in ``cookiecutter.json`` to fit your standards (e.g., default license, classifiers, or organization).
+This cookiecutter template can be customized to include personal defaults which can be adjusted in ``cookiecutter.json``
+(e.g., default license, classifiers, or organization). When customizing, it is suggested to create a fork of this
+repository.
 
-Contributing
-------------
-
-Issues and pull requests are welcome. If you extend the template, consider updating the documentation and tests in the
-skeleton to keep generated projects consistent.
 
 License
 -------
 
 This template repository is provided under the terms of the ``LICENSE`` file at the repository root. Generated projects
-will include the license you select when running Cookiecutter.
+will include the license selected when running Cookiecutter.
