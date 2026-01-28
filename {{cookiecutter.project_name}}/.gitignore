@@ -48,9 +48,10 @@ htmlcov
 # IDE project files
 .project
 .pydevproject
-../.idea
+.idea
 .junie
 .vscode
+.agent
 *.iml
 *.komodoproject
 
@@ -70,7 +71,6 @@ docs/_build
 .venv
 .cache
 .pytest
-.poetry
 .benchmarks
 .bootstrap
 .appveyor.token

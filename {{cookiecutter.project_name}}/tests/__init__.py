@@ -1,9 +1,9 @@
 """__init__.py
 The concrete test suite for the {{ cookiecutter.package_name }} package.
 
-This module serves as an initialization file for the tests package, which contains unit tests for the {{ cookiecutter.package_name }}
-package. It provides a structured testing framework to ensure the functionality and reliability of the {{ cookiecutter.package_name }}
-components. The tests are organized into subpackages that mirror the structure of the main package.
+Contains unit tests for the {{ cookiecutter.package_name }} package. It provides a structured testing framework to ensure the
+functionality and reliability of the {{ cookiecutter.package_name }} components. The tests are organized into subpackages that mirror
+the structure of the main package.
 """
 
 # Header #

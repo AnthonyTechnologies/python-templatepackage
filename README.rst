@@ -7,7 +7,7 @@ fully‑configured project with packaging, testing, formatting, documentation, a
 
 Features
 --------
-- Modern packaging with ``pyproject.toml`` (Poetry by default)
+- Modern packaging with ``pyproject.toml`` (uv by default)
 - Typed package layout under ``src/`` with ``py.typed``
 - Preconfigured tests (``pytest`` + ``nox`` sessions)
 - Linting/formatting with Ruff, isort, and Black conventions
@@ -35,20 +35,27 @@ Within the generated project skeleton (key paths):
 - ``examples/`` – example scripts
 - ``docs/python-styleguide/`` – the style guide referenced by this template
 
-Quick start
+Quick Start
 -----------
 
 Requirements:
 
-- Python 3.10+
+- Python 3.14+
 - ``pip``
 - ``cookiecutter``
+- ``uv``
 
 Install Cookiecutter:
 
 .. code-block:: console
 
    pip install cookiecutter
+
+Install uv:
+
+.. code-block:: console
+
+   pip install uv
 
 Generate a new project from this template (choose one):
 
@@ -71,6 +78,12 @@ During generation, you will be prompted for a few values. The most important are
 - ``project_name``: The repository/project name (default: ``python-{{ cookiecutter.package_name }}``)
 - ``license``: One of MIT, Apache-2.0, GPL-3.0
 - ``development_status``: Trove classifier reflecting maturity
+
+If you want to add Anthony's Style Guide as a git submodule, first ensure the new project is a git repository then:
+
+.. code-block:: console
+
+   git submodule add https://github.com/AnthonyTechnologies/python-styleguide.git docs/python-styleguide
 
 Customization
 -------------

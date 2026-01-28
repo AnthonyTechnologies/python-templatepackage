@@ -41,7 +41,7 @@ Add a description of the package here!
 Requirements
 ------------
 
-* Python 3.11 or later
+* Python 3.14 or later
 
 Installation
 ------------
