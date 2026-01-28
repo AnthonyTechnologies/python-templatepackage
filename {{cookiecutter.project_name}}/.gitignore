@@ -71,6 +71,7 @@ docs/_build
 .venv
 .cache
 .pytest
+.poetry
 .benchmarks
 .bootstrap
 .appveyor.token
