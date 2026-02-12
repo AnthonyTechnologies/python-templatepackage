@@ -2,6 +2,7 @@
 [project]
 # Project Details
 name = "{{ cookiecutter.package_import_name }}"
+version = "{{ cookiecutter.version }}"
 description = "A template package for creating python projects."
 readme = "README.rst"
 classifiers = ["{{ cookiecutter.development_status }}"]
@@ -42,7 +43,7 @@ dev = [
     "pytest>=6.2.5",
     "pytest-asyncio>=1.2.0",
     "pyupgrade>=2.29.1",
-    "ruff>=0.14.0",
+    "ruff>=0.14.14",
     "sphinx>=4.3.2",
     "sphinx-autobuild>=2021.3.14",
     "sphinx-click>=3.0.2",
