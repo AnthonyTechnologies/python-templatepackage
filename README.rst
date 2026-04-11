@@ -119,7 +119,7 @@ The `.agents <https://github.com/AnthonyTechnologies/.agents>`_ agent directives
 
    git submodule add https://github.com/AnthonyTechnologies/.agents.git .agents
 
-2. Update the pointer paths in ``.agents/languages/python.md`` to point to the correct locations (i.e., ``@../../docs/python-styleguide/style_guide_summary.md``).
+2. Update the pointer paths in ``.agents/languages/python.md`` to point to the correct locations (i.e., ``../../docs/python-styleguide/style_guide_summary.md``).
 
    **Example:**
 
